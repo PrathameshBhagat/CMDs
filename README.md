@@ -58,7 +58,8 @@ Two types fo tags : annotated and lightweight
 (check below lines once)
 Annotated:(`git tag -a v1.0.0 -m "..." `) just have more information and need to add -a flag   (check)
 Lightweight: just tags and are added as `git tag v1.0.0 -m "..." `
-###### _A Rebase or a commit automatically aborts if empty message or command_
+###### _Rebase_
+or a commit automatically aborts if empty message or command_
 - [x] #739
 - [ ] https://github.com/octo-org/octo-repo/issues/740
 100. First list item

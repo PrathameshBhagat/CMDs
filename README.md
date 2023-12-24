@@ -51,7 +51,14 @@ But keeps changes in working directory/folder only (same with just <b>git reset 
 `echo Moning >> a.php ` => ammends hello in a.php  
 `type a.php` => show content in file(`del` to delete file)  
 `cd .\A` => change directory "A"   
-`cd ..\` => go one directory/folder back     
+`cd ..\` => go one directory/folder back  
+`python -m http.server 8000` => Open web server in one line, folder same as curent directory   
+  
+To convert OracleVirtualBox OS file(i.e .vdi/.ova ) to a file usable by windows hyper-v (hyperwisor) in CMD  
+**The Format in CMD if you have virtual box installed is :**  
+`start  ...vboxmanage.exe clonehd <vdi file> <destination of vhd > --format VDH`  
+>**Copy complete line and change directories:**  
+>`start "" "E:\Program Files\Oracle\VirtualBox\vboxmanage.exe" clonehd "E:\Users\DELL\VirtualBox VMs\ubuntu\ubuntu-disk002.vdi" "f:\conv\ubuntuconverted.vhd" --format VHD` 
 # Unnecessary 
 Tags are same as branches ,they point to a commit ,but tags do not change.   
 Two types fo tags : annotated and lightweight    
@@ -74,3 +81,9 @@ multiple lines in coding for markdown use
 p
 p
 ```
+
+
+
+
+
+ 

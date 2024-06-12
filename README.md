@@ -51,17 +51,20 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `cd ..\` => Go one directory/folder back  
 `python -m http.server 8000` => Open web server in one line, folder same as the current directory   
   
-To convert the OracleVirtualBox OS file(i.e .vdi/.ova ) to a file usable by Windows hyper-v (hypervisor) in CMD  
-**The Format in CMD if you have a virtual box installed is:**  
-`start  ...vboxmanage.exe clonehd <vdi file> <destination of vhd > --format VDH`  
->**Copy complete line and change directories:**  
->`start "" "E:\Program Files\Oracle\VirtualBox\vboxmanage.exe" clonehd "E:\Users\DELL\VirtualBox VMs\ubuntu\ubuntu-disk002.vdi" "f:\conv\ubuntuconverted.vhd" --format VHD` 
-# Unnecessary 
+
+# Miscellaneous 
 Tags are the same as branches, they point to a commit, but tags do not change.   
 Two types of tags : annotated and lightweight    
 (check below lines once)
 Annotated:(`git tag -a v1.0.0 -m "..." `) just have more information and need to add -a flag   (check)
-Lightweight: just tags and are added as `git tag v1.0.0 -m "..." `
+Lightweight: just tags and are added as `git tag v1.0.0 -m "..." `  
+  
+To convert the OracleVirtualBox OS file(i.e .vdi/.ova ) to a file usable by Windows hyper-v (hypervisor) in CMD  
+**The Format in CMD if you have a virtual box installed is:**  
+`start  ...vboxmanage.exe clonehd <vdi file> <destination of vhd > --format VDH`  
+>**Copy complete line and change directories:**  
+>`start "" "E:\Program Files\Oracle\VirtualBox\vboxmanage.exe" clonehd "E:\Users\DELL\VirtualBox VMs\ubuntu\ubuntu-disk002.vdi" "f:\conv\ubuntuconverted.vhd" --format VHD`   
+
 ###### _Rebase_
 or a commit automatically aborts if an empty message or command_
 - [x] #739

@@ -44,6 +44,9 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `git rebase -i <commit ID>` => Reorder/change message/delete/merge commits, etc to commits before <commit ID>  
 `git rebase -i --root ` => Same as above but rebases all commits from history  
 > **_A Rebase or a commit automatically aborts if empty message or command_**
+
+### Tags
+`git tag` => Lists all existing tags.  
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  

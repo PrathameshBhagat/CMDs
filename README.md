@@ -5,6 +5,7 @@
 `git add .` => Add all file(s -> .) to staging area to add to next commit  
 `git commit -m " " ` => Commit/save the code with a message in " "  
 `git commit --amend` => Adds change to the previous commit, but it is now a different commit (avoid in remote repos)   
+### Log
 `git log` => Prints all current commits in the current branch  
 `git log --oneline`   => Prints all current commits in the current branch in oneline   
 `git log -p -u ` => Prints  the difference/commits from the start **(`git log --all --decorate --oneline --graph`)**   
@@ -17,6 +18,7 @@
  If at a commit, then it is in a "detached state",   If at a branch it automatically points to the latest commit of the branch  
 </i></details>  </b>
 
+### Branch
 `git branch` => Lists branches (if added -a also gives remote branches with local)  
 `git branch [branch name] ` => Creates a new branch   
 `git branch -d [branch name]`  => Deletes a branch   
@@ -26,17 +28,17 @@
  <b><details><summary>Merge </summary> </b>
 ><i>If master is just: `A ` <br> and Branch1 is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten**<br>  
 >If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  </i></details>
-
+### Diff
 `git diff` => Show changes between index(git add ,files only) and working directory   
 `git diff --cached` => Between <b><i>index</i></b> with last commit   
 `git diff HEAD` =>  Between the files in the working directory and the last commit  
-(can add HEAD~ to change the commit described in the above 2 lines)
-## _Modify local commit history_   
+(`git diff HEAD~3` changes the commit described in the above 2 lines by 3 commits, but the commit should exist)
+## Reset (_Modify local commit history_)
 `git reset --soft <commit ID>` => Brings all commits from present to <commit ID> and deletes commit history  
 But keeps changes in the working directory/folder and staging area  
 `git reset --mixed <commit ID>` => Brings all commits from present to <commit ID> and deletes commit history  
 But keeps changes in the working directory/folder only (same with just <b>git reset <commit ID></b> as is the default)    
-> **Careful Changes below are unchangeable !!**
+> **Careful Changes below are irreversible !!**
 
 `git reset --hard <commit ID>` =>**Deletes the code completely with history** and file in working directory  
 `git rebase -i <commit ID>` => Reorder/change message/delete/merge commits, etc to commits before <commit ID>  
@@ -45,7 +47,7 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  
-`echo Moning >> a.php` => Ammends hello in a.php  
+`echo Morning >> a.php` => Ammends Morning to hello in a.php  
 `type a.php` => Show content in file(`del` to delete file)  
 `cd .\A` => Change directory "A"   
 `cd ..\` => Go one directory/folder back  

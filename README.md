@@ -47,6 +47,7 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 
 ### Tags
 `git tag` => Lists all existing tags.  
+`git tag --delete [tag name]` => Deletes a local tag
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  

@@ -7,27 +7,28 @@
 `git commit --amend` => Adds change to the previous commit, but it is now a different commit (avoid in remote repos)   
 ### Log
 `git log` => Prints all current commits in the current branch  
-`git log --oneline`   => Prints all current commits in the current branch in oneline   
+`git log --oneline`   => Prints all current commits in the current branch in oneline  
+`git log --follow -- [file name]` => Prints all commits that modified a file  
 `git log -p -u ` => Prints  the difference/commits from the start **(`git log --all --decorate --oneline --graph`)**   
 `git status` => Check the status of the staging area   
 `git revert <commitID>` => Revert a single commit (this works on a remote branch/repo too)  
-<b><details><summary> Branch </summary>
-><i> A branch is just a name associated with a commit(just for understanding)  
- A commit has a next pointer(just for understanding)  
- `HEAD` is just where  you currently are, at a particular commit or at a branch's start,  
- If at a commit, then it is in a "detached state",   If at a branch it automatically points to the latest commit of the branch  
-</i></details>  </b>
 
 ### Branch
+> A branch is just a name associated with a commit(just for understanding)  
+ A commit has a next pointer(just for understanding)  
+ `HEAD` is just where  you currently are, at a particular commit or at a branch's start,  
+ If at a commit, then it is in a "detached state",   If at a branch it automatically points to the latest commit of the branch
+
 `git branch` => Lists branches (if added -a also gives remote branches with local)  
 `git branch [branch name] ` => Creates a new branch   
 `git branch -d [branch name]`  => Deletes a branch   
 `git branch -m [old] [new]` => Renames a branch  
 `git checkout X..` => To go to a branch or commit (just moves HEAD)   
 `git merge A` =>   Would merge A into the current/existing branch  
- <b><details><summary>Merge </summary> </b>
-><i>If master is just: `A ` <br> and Branch1 is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten**<br>  
->If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  </i></details>
+
+>### Merge  
+> If master is just: `A ` <br> and Branch1 is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten**<br>  
+If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  
 ### Diff
 `git diff` => Show changes between index(git add ,files only) and working directory   
 `git diff --cached` => Between <b><i>index</i></b> with last commit   

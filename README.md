@@ -26,7 +26,7 @@
 `git checkout X..` => To go to a branch or commit (just moves HEAD)   
 `git merge A` =>   Would merge A into the current/existing branch  
 
->### Merge  
+>#### Merge  
 > If master is just: `A ` <br> and Branch1 is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten**<br>  
 If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  
 ### Diff

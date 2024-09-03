@@ -35,6 +35,16 @@ If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflic
 `git diff --cached` => Between <b><i>index</i></b> with last commit   
 `git diff HEAD` =>  Between the files in the working directory and the last commit  
 (`git diff HEAD~3` changes the commit described in the above 2 lines by 3 commits, but the commit should exist)
+
+### Tags
+`git tag [tag name] [comit ID]` => Creates a local tag at a commit  
+`git tag` => Lists all existing tags.  
+`git tag --delete [tag name]` => Deletes a local tag
+> **To rename local and remote tag**  
+> `git tag [new tag name] [old tag name]` => First create a new tag (local) from the old tag (this dosen't deletes old tag)  
+> `git tag --delete [old tag name]` => Delete old tag (locally)  
+> `git push [branch name] [new tag name] :[old tag name]` => Pushes the newly created tag, and **deletes the old tag** as nothing was specified beforwe colon ':' 
+
 ## Reset (_Modify local commit history_)
 `git reset --soft <commit ID>` => Brings all commits from present to <commit ID> and deletes commit history  
 But keeps changes in the working directory/folder and staging area  
@@ -47,14 +57,6 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `git rebase -i --root ` => Same as above but rebases all commits from history  
 > **_A Rebase or a commit automatically aborts if empty message or command_**
 
-### Tags
-`git tag [tag name] [comit ID]` => Creates a local tag at a commit  
-`git tag` => Lists all existing tags.  
-`git tag --delete [tag name]` => Deletes a local tag
-> **To rename local and remote tag**  
-> `git tag [new tag name] [old tag name]` => First create a new tag (local) from the old tag (this dosen't deletes old tag)  
-> `git tag --delete [old tag name]` => Delete old tag (locally)  
-> `git push [branch name] [new tag name] :[old tag name]` => Pushes the newly created tag, and **deletes the old tag** as nothing was specified beforwe colon ':' 
 
 # CMD Commands 
 `cls` => Clear screen  

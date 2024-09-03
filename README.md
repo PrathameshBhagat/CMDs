@@ -23,6 +23,8 @@
 `git branch [branch name] ` => Creates a new branch   
 `git branch -d [branch name]`  => Deletes a local branch   
 `git push [remote name] --delete [branch name]` => Deletes a remote branch  
+`git branch --remote --delete [remotename]/[branch name]` => Deletes a remote tracking branch  
+(visible on `git branch --all`, as remotes/[origin..]/..)  
 `git branch -m [old] [new]` => Renames a branch  
 `git checkout X..` => To go to a branch or commit (just moves HEAD)   
 `git merge A` =>   Would merge A into the current/existing branch  

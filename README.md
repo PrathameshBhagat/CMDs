@@ -51,6 +51,11 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `git tag [tag name] [comit ID]` => Creates a local tag at a commit  
 `git tag` => Lists all existing tags.  
 `git tag --delete [tag name]` => Deletes a local tag
+> **To rename local and remote tag**  
+> `git tag [new tag name] [old tag name]` => First create a new tag (local) from the old tag (this dosen't deletes old tag)  
+> `git tag --delete [old tag name]` => Delete old tag (locally)  
+> `git push [branch name] [new tag name] :[old tag name]` => Pushes the newly created tag, and **deletes the old tag** as nothing was specified beforwe colon ':' 
+
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  

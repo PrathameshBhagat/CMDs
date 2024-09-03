@@ -48,6 +48,7 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 > **_A Rebase or a commit automatically aborts if empty message or command_**
 
 ### Tags
+`git tag [tag name] [comit ID]` => Creates a local tag at a commit  
 `git tag` => Lists all existing tags.  
 `git tag --delete [tag name]` => Deletes a local tag
 # CMD Commands 

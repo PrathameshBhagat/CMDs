@@ -8,8 +8,8 @@
 });`  
 => Sorts a 2-D array using a comparator  
 
-`Arrays.deepToString(int[][][]..);` => Prints all the nested arrays(deepToString method)  
-`Arrays.toString(int[])` => Prints a **1-D** array  
+`Arrays.deepToString(int[][][]..);` => Returns all the nested arrays(deepToString method)  
+`Arrays.toString(int[])` => Returns a **1-D** array  
 `Arrays.stream(myArray)  
 .flatMapToInt(Arrays::stream)   
 .forEach(num -> System.out.print(num + " "));`  

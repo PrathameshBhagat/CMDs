@@ -41,7 +41,8 @@ If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflic
 ### Tags
 `git tag [tag name] [comit ID]` => Creates a local tag at a commit  
 `git tag` => Lists all existing tags.  
-`git tag --delete [tag name]` => Deletes a local tag
+`git tag --delete [tag name]` => Deletes a local tag  
+`git push [remote name] :[tag name]` => Deletes a remote tag, **semicolon is important**  
 > **To rename local and remote tag**  
 > `git tag [new tag name] [old tag name]` => First create a new tag (local) from the old tag (this dosen't deletes old tag)  
 > `git tag --delete [old tag name]` => Delete old tag (locally)  

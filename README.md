@@ -14,10 +14,11 @@
 `git revert <commitID>` => Revert a single commit (this works on a remote branch/repo too)  
 
 ### Branch
-> A branch is just a name associated with a commit(just for understanding)  
- A commit has a next pointer(just for understanding)  
- `HEAD` is just where  you currently are, at a particular commit or at a branch's start,  
- If at a commit, then it is in a "detached state",   If at a branch it automatically points to the latest commit of the branch
+<details><Summary><b>Explain branch</b></Summary>  
+<H4> A branch is just a name associated with a commit(just for understanding) <br>  
+A commit has a next pointer(just for understanding)<br>  
+`HEAD` is just where  you currently are, at a particular commit or at a branch's start,<br>  
+If at a commit, then it is in a "detached state",   If at a branch it automatically points to the latest commit of the branch</H4></details>  
 
 `git branch` => Lists branches (if added -a also gives remote branches with local)  
 `git branch [branch name] ` => Creates a new branch   
@@ -29,9 +30,10 @@
 `git checkout X..` => To go to a branch or commit (just moves HEAD)   
 `git merge A` =>   Would merge A into the current/existing branch  
 
->#### Merge  
-> If master is just: `A ` <br> and Branch1 is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten**<br>  
-If your master is: `A - C`<br> and Branch1 is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  
+<details><Summary><b>Git Merge</b></Summary> 
+<H4>If master is just: `A ` <br> and feature is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten** and master becomes A - B<br>  
+If your master is: `A - C`<br> and feature is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  </H4></details>
+
 ### Diff
 `git diff` => Show changes between index(git add ,files only) and working directory   
 `git diff --cached` => Between <b><i>index</i></b> with last commit   

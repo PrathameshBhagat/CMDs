@@ -62,7 +62,7 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `git rebase -i --root ` => Same as above but rebases all commits from history  
 > **_A Rebase or a commit automatically aborts if empty message or command_**
 
-
+<br><br>
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  
@@ -71,8 +71,8 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `cd .\A` => Change directory "A"   
 `cd ..\` => Go one directory/folder back  
 `python -m http.server 8000` => Open web server in one line, folder same as the current directory   
-  
 
+  <br><br>
 # Miscellaneous 
 Tags are the same as branches, they point to a commit, but tags do not change.   
 Two types of tags : annotated and lightweight    
@@ -86,8 +86,7 @@ To convert the OracleVirtualBox OS file(i.e .vdi/.ova ) to a file usable by Wind
 >**Copy complete line and change directories:**  
 >`start "" "E:\Program Files\Oracle\VirtualBox\vboxmanage.exe" clonehd "E:\Users\DELL\VirtualBox VMs\ubuntu\ubuntu-disk002.vdi" "f:\conv\ubuntuconverted.vhd" --format VHD`   
 
-###### _Rebase_
-or a commit automatically aborts if an empty message or command_
+###### _Rebase or a commit automatically aborts if an empty message or command_
 - [x] #739
 - [ ] https://github.com/octo-org/octo-repo/issues/740
 100. First list item

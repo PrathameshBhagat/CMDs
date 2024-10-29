@@ -14,3 +14,6 @@
 .flatMapToInt(Arrays::stream)   
 .forEach(num -> System.out.print(num + " "));`  
 => Flatterns a **2-D** array and prints content
+
+# Lists 
+`Q.isEmpty()` => Checks if a list only contains null's or has length = 0. 

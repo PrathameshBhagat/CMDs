@@ -10,9 +10,7 @@
 
 `Arrays.deepToString(int[][][]..);` => Returns all the nested arrays(deepToString method)  
 `Arrays.toString(int[])` => Returns a **1-D** array  
-`Arrays.stream(myArray)  
-.flatMapToInt(Arrays::stream)   
-.forEach(num -> System.out.print(num + " "));`  
+`Arrays.stream(myArray).flatMapToInt(Arrays::stream).forEach(num -> System.out.print(num + " "));`  
 => Flatterns a **2-D** array and prints content
 
 # Lists 

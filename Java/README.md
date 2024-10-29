@@ -15,3 +15,16 @@
 
 # Lists 
 `Q.isEmpty()` => Checks if a list only contains null's or has length = 0. 
+
+# DFS 
+
+<Details> <Summary> Count nodes in a binary tree by DFS </Summary> 
+```
+    int countNodes(TreeNode root) {
+        if(root == null)
+            return 0;
+
+        return (1 + countNodes(root.left) + countNodes(root.right));
+    }
+    ```java </Details>
+

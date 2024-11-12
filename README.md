@@ -31,8 +31,20 @@ If at a commit, then it is in a "detached state",   If at a branch it automatica
 `git merge A` =>   Would merge A into the current/existing branch  
 
 <details><Summary><b>Git Merge</b></Summary> 
-<b>If master is just: `A ` <br> and feature is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten** and master becomes A - B<br>  
-If your master is: `A - C`<br> and feature is: `A - B` => Merge raises a conflict issue as C needs to be rewritten  </b></details>
+  
+If master is just: `A` <br> and feature is: `A - B` => Does not raise conflict issue as **no commit needs to be rewritten** and master becomes A - B<br>  
+If your master is: `A - C`<br> and feature is: `A - B` => Merge raises a conflict issue as **C needs to be rewritten** <hr>(Unverified)  
+
+If master :  `A - B - C - D - E - F`,   
+feature : `A - B - G - H `  
+
+ 
+Then do `git merge --squash feature` when you are on master   <br>
+It'll become `A - B - C - D - E - F - (all changes from feature in staging area)`  
+now a commit with approprite mnessage     
+So it changes to : `A - B - C - D - E - F - (one commit wit changes from G, H and all others)`   
+
+</details>
 
 ### Diff
 `git diff` => Show changes between index(git add ,files only) and working directory   

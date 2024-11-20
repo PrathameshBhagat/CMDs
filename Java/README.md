@@ -20,6 +20,26 @@
 # Lists 
 `Q.isEmpty()` => Checks if a list only contains null's or has length = 0.  
 `Collections.sort(Q)` => Sorts a list (arraylist, linkedlist, any colletion)  
+
+# Map
+<Details><Summary>Sort a map by key/Value by converting to list of Map entries </Summary>
+
+  ```java
+//(Modify classes as required)
+Map<int[], Double> map = new  HashMap<>();
+
+for(int[] a : points)
+            
+    map.put(new int[]{a[0], a[1]}, dist(a) );
+// Map created, can be an normal map in place
+// Now create list and sort by comparator
+List<Map.Entry<int[], Double>> list = new ArrayList<>(map.entrySet());
+
+list.sort(Map.Entry.comparingByValue());
+
+```  
+</Details>
+
 # DFS 
 <details> <summary>Count nodes in a binary tree by DFS </summary>
 

@@ -31,8 +31,8 @@ Map<int[], Double> map = new  HashMap<>();
 for(int[] a : points)
             
     map.put(new int[]{a[0], a[1]}, dist(a) );
-// Map created, can be an normal map in place
-// Now create list and sort by comparator
+// Map created, can be an normal map in place  
+// Now create list and sort by comparator  
 List<Map.Entry<int[], Double>> list = new ArrayList<>(map.entrySet());
 
 list.sort(Map.Entry.comparingByValue());
@@ -51,3 +51,42 @@ list.sort(Map.Entry.comparingByValue());
   }
 ```
 </details>
+
+# Formatting required 
+`Collections.sort(productsList);` => sorts any list might sort other collections if comparable methord is present
+  
+`Arrays.sort(array,(optional)Comparator)` => sort array in ascending order  
+
+`Arrays.stream(candidates).boxed().sorted(Collections.reverseOrder()).mapToInt(Integer::intValue).toArray();`  
+=> Sort primitive array in reverse order   
+   
+`Integer.toBinaryString(i);` => Integer to binary String conversion   
+`Integer.parseInt(binaryMaxString,2);` => String base 2 to Integer Conversion (Binary String to Integer conversion)    
+
+`map.entrySet()  
+  .stream()  
+  .sorted(Map.Entry.comparingByValue())  
+  .forEach(System.out::println);`  
+// Sorting a Map by Value and by Key ^  
+// In place of fore each you may need :  
+`.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));`  
+  
+// For reverse order   
+`map.entrySet()  
+      .stream()  
+      .sorted(Map.Entry.<K, V>comparingByValue().reversed())  
+      .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));`  
+  
+  
+//Java String List sorting   
+//By Length ->  
+        `Collections.sort( validSubStrings , Comparator.comparing(s->s.length()));`  
+//By alphabetic order ->  
+        `Collections.sort( validSubStrings );`  
+//By length then alphabetic ->  
+  
+`Collections.sort( validSubStrings , (string1, string2) ->  
+                if(string1.length() != string2.length())  
+                    return Integer.compare(string1.length(), string2.length());  
+                else return string1.compareTo( string2 ););`  
+    

@@ -74,9 +74,10 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `git rebase -i --root ` => Same as above but rebases all commits from history  
 > **_A Rebase or a commit automatically aborts if empty message or command_**
 
-<br><br>
-# Vim Commands and snippets
-**shift + p** => in command mode do a to paste system clip board
+
+## Vim Commands and snippets
+**shift + p** => in command mode do a to paste system clip board  
+(https://www.warp.dev/terminus/vim-copy-paste)[https://www.warp.dev/terminus/vim-copy-paste]<br><br><br><br>
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  

@@ -75,6 +75,8 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 > **_A Rebase or a commit automatically aborts if empty message or command_**
 
 <br><br>
+# Vim Commands and snippets
+**shift + p** => in command mode do a to paste system clip board
 # CMD Commands 
 `cls` => Clear screen  
 `echo hello> a.php` => Write hello in a.php(<b>overrides the complete file</b>)  

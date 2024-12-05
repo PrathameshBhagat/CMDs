@@ -64,18 +64,28 @@ Steps :-
  1) All steps in recursion/dfs
  2) Express in terms of indexes if required (coordinate shift may be required to make  -1 -> n to 0 -> or etc.) 
  3) Note changes in index and parameters in dfs ore recursin parameters.
- 4) Then in reursion add
-    A) if( "this index exist int dp << array or object >>" )
-    
-        return dp[index] << or equivalent >>
+ 4) Then in reursion add:   
+```
 
-    berofe returning the solved solution add :
+    A) ==>>
 
-    B) dp[index] = << computed solution >>
+    if( << if this index exist int dp array or object >>" )
+
+      return dp[index] << or equivalent >>  
+
+  
+    // Before returning the solved solution (at the end), add >>
+
+
+    B) ==>>
+    dp[index] = << computed solution >>  
 
     return;
+     
+   ```java
+   
 
-Tabulation :  :
+# Tabulation :  :
 1) All steps in memoization)
 2) Note index changes and create for loops for them 
 3) Copy recurrence code in dfs/recursion and pasrte in loops

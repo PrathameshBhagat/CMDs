@@ -49,7 +49,7 @@
  </details>
 
  
-> ### LIS Longest Inreasing subsequence
+> ### Longest Inreasing subsequence (LIS)
 > via striver can explain all this including memoiation  & tabulation
 
 ### DFS or Recursion
@@ -64,30 +64,30 @@ Steps :-
  1) All steps in recursion/dfs
  2) Express in terms of indexes if required (coordinate shift may be required to make  -1 -> n to 0 -> or etc.) 
  3) Note changes in index and parameters in dfs ore recursin parameters.
- 4) Then in reursion add:   
-```
+ 4) Then in reursion add:
+  
+  ```java
 
-    A) ==>>
+    A)
+        if( << if this index exist int dp array or object >>" )
 
-    if( << if this index exist int dp array or object >>" )
-
-      return dp[index] << or equivalent >>  
+            return dp[index] << or equivalent >>  
 
   
-    // Before returning the solved solution (at the end), add >>
+    // After this, before returning the solved solution (at the end), add >>
 
 
-    B) ==>>
-    dp[index] = << computed solution >>  
+    B) 
+          dp[index] = << computed solution >>  
 
-    return;
+        return;
      
-   ```java
+```
    
 
-# Tabulation :  :
-1) All steps in memoization)
-2) Note index changes and create for loops for them 
+### Tabulation :  :
+1) All steps in memoization
+2) Note index changes (from above) and create for loops for them (coordinate shift or increacse dp size by 1, etc.) 
 3) Copy recurrence code in dfs/recursion and pasrte in loops
 4) return dp[] == ... becomes dp[] = ....
 5) Memori optimise if you use   n * m and use previous row/ column only to solve current state. 

@@ -1,7 +1,9 @@
 # Arrays 
 
 <details> <summary>  Sort a normal array using a comparator (1-D array) </summary>
+  
   ```java
+
   // For normal array of string i.e.String[] - >
   Arrays.sort(n, new Comparator<String>() {
               @Override
@@ -10,6 +12,7 @@
                   return s1.compareTo(s2);
               }
           });
+
 ```
 </details>  
 

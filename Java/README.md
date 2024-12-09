@@ -9,7 +9,7 @@
               @Override
               public int compare(String o1, String o2) {
                   // Most built objects have compareTo method you can use them
-                  return s1.compareTo(s2);
+                  return o1.compareTo(o2);
               }
           });
 

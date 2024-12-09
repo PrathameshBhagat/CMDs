@@ -17,7 +17,7 @@
 </details>  
 
 **`Arrays.sort(arr, (a, b) -> Integer.compare(a[col],b[col]));`** => Sorts a **2-D** array
-<details> <summary>=> Sort a 2-D array using a comparator </summary>
+<details> <summary> Sort a 2-D array using a comparator </summary>
 
   ```java
   Arrays.sort(array, new java.util.Comparator<int[]>() {
@@ -28,8 +28,8 @@
 ```
 </details>  
 
-**`Arrays.deepToString(int[][][]..);`** => Returns all the nested arrays(deepToString method)  
-**`Arrays.toString(int[])`** => Returns a **1-D** array  
+**`Arrays.deepToString(int[][][]..);`** => Returns all the nested arrays in the form of a string(deepToString method)  
+**`Arrays.toString(int[])`** => Returns a **1-D** array in the form of a string  
 **`Arrays.stream(myArray).flatMapToInt(Arrays::stream).forEach(num -> System.out.print(num + " "));`**  
 => Flatterns a **2-D** array and prints content
 

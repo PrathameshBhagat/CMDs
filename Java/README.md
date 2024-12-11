@@ -1,5 +1,5 @@
 # Arrays 
-
+#### `a = b.clone() ` => only way to copy array without for loop
 <details> <summary>  Sort a normal array using a comparator (1-D array) </summary>
   
   ```java
@@ -56,6 +56,26 @@ list.sort(Map.Entry.comparingByValue());
 ```  
 </Details>
 
+# Collection
+
+**`Collections.sort(productsList);`** => sorts any list might sort other collections if **compare method** is present
+<Details><Summary>If compare method not present + shortcut </Summary>
+
+  ```java
+//(Modify arrow function as required, here the collection is a list of int[] so a&b are int[] and henceforth)
+Collections.sort(L , (a,b) -> { 
+
+            if(a[0]!=b[0]) 
+                
+                return Integer.compare(a[0],b[0]);
+
+            return Integer.compare(a[1],b[1]);
+
+        });
+
+```  
+</Details>
+
 # DFS 
 <details> <summary>Count nodes in a binary tree by DFS </summary>
 
@@ -69,8 +89,6 @@ list.sort(Map.Entry.comparingByValue());
 </details>
 
 # Formatting required 
-**`Collections.sort(productsList);`** => sorts any list might sort other collections if comparable methord is present
-  
 **`Arrays.sort(array,(optional)Comparator)`** => sort array in ascending order  
 
 **`Arrays.stream(candidates).boxed().sorted(Collections.reverseOrder()).mapToInt(Integer::intValue).toArray();`**  

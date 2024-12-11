@@ -87,7 +87,7 @@ Collections.sort(L , (a,b) -> {
   }
 ```
 </details>
-
+<br><br><br><br><br><br>
 # Formatting required 
 **`Arrays.sort(array,(optional)Comparator)`** => sort array in ascending order  
 

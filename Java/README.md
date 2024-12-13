@@ -36,7 +36,7 @@
 # Lists 
 **`Q.isEmpty()`** => Checks if a list only contains null's or has length = 0.  
 **`Collections.sort(Q)`** => Sorts a list (arraylist, linkedlist, any colletion)  
-
+**`int [] ints = list.stream().mapToInt(Integer::intValue).toArray();`** => convert list of integer  to int[].
 # Map
 <Details><Summary>Sort a map by key/Value by converting to list of Map entries </Summary>
 
@@ -107,11 +107,15 @@ Collections.sort(L , (a,b) -> {
 **`.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));`**  
   
 // For reverse order   
-**`map.entrySet()  
+**`Map<K,V> newMap = map.entrySet()  
       .stream()  
       .sorted(Map.Entry.<K, V>comparingByValue().reversed())  
-      .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));`**  
-  
+      .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));`**   
+        
+      OR  
+**`Map<Integer,Integer>  sorted = map.entrySet().stream()
+       .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+       .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));`**  
   
 //Java String List sorting   
 //By Length ->  

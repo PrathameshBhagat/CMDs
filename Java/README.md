@@ -33,6 +33,9 @@
 **`Arrays.stream(myArray).flatMapToInt(Arrays::stream).forEach(num -> System.out.print(num + " "));`**  
 => Flatterns a **2-D** array and prints content
 
+# Stack !!!
+**`Stack<Integer> s = new Stack();`** => Only way to create stack !!!!
+
 # Lists 
 **`Q.isEmpty()`** => Checks if a list only contains null's or has length = 0.  
 **`Collections.sort(Q)`** => Sorts a list (arraylist, linkedlist, any colletion)  

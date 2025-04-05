@@ -58,6 +58,33 @@ list.sort(Map.Entry.comparingByValue());
 
 ```  
 </Details>
+<Details><Summary>Sort a map by key THEN by Value by converting to list of Map entries </Summary>
+
+  ```java
+//(Modify classes as required)
+Map<Integer,Integer> map = new  HashMap<>();
+
+for(int a : points)
+            
+    map.put( << first number>>, << second number>> );
+
+// Map created, can be an normal map in place  
+// Now create list and sort by comparator  
+  List<Map.Entry<Integer,Integer>> l = new ArrayList<>(m.entrySet());
+
+Collections.sort(l, (a,b) ->{
+
+    if(a.getKey() ! = b.getKey() )
+
+      return a.getKey().compareTo(b.getKey()) ;
+
+    
+      return a.getValue().compareTo(b.getValue()) ;
+   });
+
+```  
+</Details>
+
 
 # Collection
 

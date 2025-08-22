@@ -41,6 +41,7 @@
 **`Collections.sort(Q)`** => Sorts a list (arraylist, linkedlist, any colletion)  
 **`int [] ints = list.stream().mapToInt(Integer::intValue).toArray();`** => convert list of integer  to int[].
 # Map
+ ```map.computeIfAbsent(content, k -> new ArrayList<>()).add(fullPath);```  
 <Details><Summary>Sort a map by key/Value by converting to list of Map entries </Summary>
 
   ```java

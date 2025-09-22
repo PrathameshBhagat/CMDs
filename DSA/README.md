@@ -1,10 +1,41 @@
-#  Breadth first search / Level order traversal
+
+<details> <summary> Bit Manipulation </summary>
+
+## Check a bit 
+ **```result = num & (1 << position)```**  
+(position-1) may be required
+## Set a bit
+
+ **```num = num | (1 << position)```**
+
+  Example:  
+    1100  = 1000  | (1 << 2)  (Binary representation)  
+     (12) => 1100    
+     (8) => 1000  
+     (4) =>  1<<2 => 100  
+
+## Unset a bit
+ **```num = num & ~(1 << position)```**
+    
+   Example:   
+1000 = 1100 & ~(1 << 2)  (Binary representation)  
+(8)    (12)     (4)
+
+## Flip a bit
+ **```num = num ^ (1 << position)```**
+    
+   Example:  
+1000 = 1100 ^ (1 << 2)  (Binary representation)  
+(8)    (12)     (4)
+</details>
+
+##  Breadth first search / Level order traversal
 1. Take a Queue data structure. (can be linked-list/array etc. implemented as a Queue)
 2. Add first vertex, to queue.
 3. Pop a vertex from queue then visit it.
 4. Then add all of its neighbours to queue (next nodes/vertexes).
 5. Repeat step 3 & 4, stop if Queue is empty (and 3. cant pop now.).
-# Depth first search (DFS)
+## Depth first search (DFS)
 <details> <summary> Code to generate all possible combinations of a sting of a given length by DFS </summary>
 
   ```java

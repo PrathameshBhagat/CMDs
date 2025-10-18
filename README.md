@@ -88,18 +88,35 @@ But keeps changes in the working directory/folder only (same with just <b>git re
 `python -m http.server 8000` => Open web server in one line, folder same as the current directory   
 
   <br><br>
-# Miscellaneous 
+# Miscellaneous
+
+#### Tags
 Tags are the same as branches, they point to a commit, but tags do not change.   
 Two types of tags : annotated and lightweight    
 (check below lines once)
 Annotated:(`git tag -a v1.0.0 -m "..." `) just have more information and need to add -a flag   (check)
 Lightweight: just tags and are added as `git tag v1.0.0 -m "..." `  
-  
+
+#### Windows 
 To convert the OracleVirtualBox OS file(i.e .vdi/.ova ) to a file usable by Windows hyper-v (hypervisor) in CMD  
 **The Format in CMD if you have a virtual box installed is:**  
 `start  ...vboxmanage.exe clonehd <vdi file> <destination of vhd > --format VDH`  
 >**Copy complete line and change directories:**  
->`start "" "E:\Program Files\Oracle\VirtualBox\vboxmanage.exe" clonehd "E:\Users\DELL\VirtualBox VMs\ubuntu\ubuntu-disk002.vdi" "f:\conv\ubuntuconverted.vhd" --format VHD`   
+>`start "" "E:\Program Files\Oracle\VirtualBox\vboxmanage.exe" clonehd "E:\Users\DELL\VirtualBox VMs\ubuntu\ubuntu-disk002.vdi" "f:\conv\ubuntuconverted.vhd" --format VHD`
+---
+
+#### Windows ??
+docker file =>>
+```dockerfile
+	FROM eclipse-temurin:21
+	COPY revenuecalculator-0.0.1-SNAPSHOT.jar /app.jar
+	CMD ["java","-jar","/app.jar"]
+```
+  
+get a process at a PORT ==>> `netstat -ano | find "8080"`  
+To kill a process with PID ==>>  `taskkill /F /PID 11116`
+
+---
 
 ###### _Rebase or a commit automatically aborts if an empty message or command_
 - [x] #739

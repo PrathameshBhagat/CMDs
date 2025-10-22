@@ -121,6 +121,25 @@ Collections.sort(L , (a,b) -> {
 <br><br><br><br><br><br>
 
 # Formatting required 
+
+Following is logic doubt full (very).  BUT  `+` was too slow than buffer on leetcode=>>     
+  
+`i + ","+ j` is slow beacause concatenation creates new strings each time, 
+i.e. `i+","` creates one string and `i+","` + `j` creates other string.
+
+This code **below** is too fast as compared to above
+```java
+  StringBuffer sb = new StringBuffer(); // Same string is appened,
+StringBuffer sbf = new StringBuffer();
+                sb.append(i);
+                sb.append(',');
+                sb.append(j);
+String s = sb.toString();
+// StringBuilder: Not thread-safe
+// StringBuffer: Thread-safe (synchronized)
+```
+
+
 **`Arrays.sort(array,(optional)Comparator)`** => sort array in ascending order  
 
 **`Arrays.stream(candidates).boxed().sorted(Collections.reverseOrder()).mapToInt(Integer::intValue).toArray();`**  

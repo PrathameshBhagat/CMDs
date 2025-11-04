@@ -4,7 +4,7 @@
 ## Check a bit 
  **```result = num & (1 << position)```**  
 (position-1) may be required
-## Set a bit
+## Set a bit ( '1' ?)
 
  **```num = num | (1 << position)```**
 
@@ -14,7 +14,7 @@
      (8) => 1000  
      (4) =>  1<<2 => 100  
 
-## Unset a bit
+## Unset a bit (Set a '0' ? )
  **```num = num & ~(1 << position)```**
     
    Example:   

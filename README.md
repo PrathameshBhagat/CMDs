@@ -1,7 +1,8 @@
 # Git Commands
 `git init` => Initialise a git repository in the folder  
 `git clone https://` => Clone a repo in new folder  
-`git clone -b <branch> --single-branch https:...` => For single branch  
+`git clone -b <branch> --single-branch https:...` => For single branch   
+`git clone --depth <no-of-commits> --branch <branch> <repo-url>` => For cloning only some last commits from a single branch  
 `git add .` => Add all file(s -> .) to staging area to add to next commit  
 `git commit -m " " ` => Commit/save the code with a message in " "  
 `git commit --amend` => Adds change to the previous commit, but it is now a different commit (avoid in remote repos)   
